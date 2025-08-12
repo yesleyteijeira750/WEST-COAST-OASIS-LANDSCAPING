@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Site under maintenance</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
   <style>
     body {
       background: linear-gradient(135deg, #a8e6cf, #dcedc1);
@@ -26,9 +27,15 @@
       margin-bottom: 40px;
     }
     .coming-soon {
-      font-family: 'Brush Script MT', italic;
-      font-size: 36px;
+      font-family: 'Pacifico', cursive;
+      font-size: 40px;
       color: #ff6f61;
+      display: inline-block;
+      animation: bounce 1.5s infinite;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
     }
   </style>
 </head>
