@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Site under maintenance</title>
+  <!-- Fuente bonita para el Coming Soon -->
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
   <style>
     body {
@@ -12,35 +13,50 @@
       text-align: center;
       padding: 50px;
       color: #333;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 100vh;
     }
     img {
-      max-width: 250px;
+      max-width: 300px;
+      height: auto;
       margin-bottom: 20px;
+      filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.2));
     }
     h1 {
       color: #2e8b57;
-      font-size: 2.2em;
+      font-size: 2.5em;
       margin-bottom: 10px;
     }
     p {
-      font-size: 18px;
+      font-size: 20px;
       margin-bottom: 40px;
     }
     .coming-soon {
       font-family: 'Pacifico', cursive;
-      font-size: 40px;
+      font-size: 42px;
       color: #ff6f61;
       display: inline-block;
-      animation: bounce 1.5s infinite;
+      animation: bounce 1.5s infinite ease-in-out;
     }
     @keyframes bounce {
       0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-10px); }
+      50% { transform: translateY(-8px); }
+    }
+    /* Mejor vista en pantallas grandes */
+    @media (min-width: 768px) {
+      body {
+        padding: 80px;
+      }
+      img {
+        max-width: 350px;
+      }
     }
   </style>
 </head>
 <body>
-  <img src="Logo/logo.png" alt="Logo">
+  <img src="logo.png" alt="Logo">
   <h1>WEST COAST OASIS LANDSCAPING</h1>
   <p>We are currently under maintenance.<br>Our new website will be ready very soon.</p>
   <div class="coming-soon">COMING SOON</div>
