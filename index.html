@@ -3,73 +3,172 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>WEST COAST OASIS LANDSCAPING</title>
-  <link rel="icon" type="image/png" href="logo.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+  <title>West Coast Oasis Landscaping</title>
   <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(180deg, #d4f1be 0%, #e9f8db 70%, #f7fff0 100%);
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #2d3436;
-      overflow: hidden;
+    :root {
+      --green: #4caf50;
+      --light-green: #d1f2eb;
+      --gradient-start: #6abb92;
+      --gradient-end: #a8e063;
+      --background: #f2fcf7;
     }
     body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      animation: fadeIn 2s ease-in-out;
-      gap: 15px;
-      padding: 20px;
-    }
-    img {
-      width: 150px;
-      height: auto;
-      margin-bottom: 20px;
-    }
-    h1 {
-      font-size: clamp(2rem, 6vw, 3.5rem);
       margin: 0;
-      letter-spacing: 3px;
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--background);
+      color: #2e2e2e;
+      line-height: 1.6;
+    }
+    header {
+      background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+      color: white;
+      padding: 3rem 1rem 2.5rem;
+      text-align: center;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+    header img {
+      max-height: 80px;
+      margin-bottom: 15px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
       font-weight: 700;
     }
-    h1[translate="no"] {
-      /* no traducir */
+    header p {
+      margin: 1rem 0 1.5rem;
+      font-size: 1.2rem;
+      font-weight: 500;
     }
-    .animated-text {
-      animation: moveTogether 3s ease-in-out infinite alternate;
+    .nav-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: nowrap;
+      gap: 0.5rem;
+    }
+    .nav-buttons a {
+      background: white;
+      color: var(--green);
+      padding: 0.6rem 1rem;
+      border-radius: 20px;
+      border: 2px solid var(--green);
+      text-decoration: none;
       font-weight: 600;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      transition: all 0.3s;
+      font-size: 0.9rem;
     }
-    .creating {
-      font-size: clamp(1.2rem, 3vw, 1.8rem);
-      color: #2d3436;
-      font-family: 'Segoe UI', sans-serif;
+    .nav-buttons a:hover {
+      background: var(--green);
+      color: white;
     }
-    .coming-soon {
-      font-family: 'Pacifico', cursive;
-      font-size: clamp(2.5rem, 6vw, 4rem);
-      color: #27ae60; /* verde vibrante */
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.15);
+    .container {
+      max-width: 960px;
+      margin: auto;
+      padding: 2rem 1rem;
+    }
+    .section {
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+    .section h2 {
+      color: var(--green);
       margin-top: 0;
+      font-size: 1.8rem;
+      font-weight: 700;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
+    .section a {
+      color: #006e51;
+      font-weight: 700;
+      text-decoration: none;
     }
-    @keyframes moveTogether {
-      0% { transform: translateY(0); }
-      100% { transform: translateY(-15px); }
+    .section a:hover {
+      text-decoration: underline;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem 1rem;
+      background: #cdeee1;
+      font-size: 1rem;
+      margin-top: 3rem;
+      border-top: 4px solid var(--green);
+      font-weight: 500;
+    }
+    @media (max-width: 600px) {
+      .nav-buttons { flex-wrap: wrap; }
+      .nav-buttons a { font-size: 0.85rem; padding: 0.5rem 0.8rem; }
     }
   </style>
 </head>
 <body>
-  <img src="logo.png" alt="WEST COAST OASIS LANDSCAPING Logo" />
-  <h1 translate="no">WEST COAST OASIS LANDSCAPING</h1>
-  <div class="animated-text creating">We are creating our website</div>
-  <div class="animated-text coming-soon">Coming Soon</div>
+
+<header>
+  <img src="logo.png" alt="West Coast Oasis Landscaping Logo">
+  <h1>West Coast Oasis Landscaping</h1>
+  <p>We transform your yard into a true paradise</p>
+  <div class="nav-buttons">
+    <a href="tel:+19414577317">Call Now</a>
+    <a href="sms:+19414577317?body=I%20want%20West%20Coast%20Oasis%20Landscaping%20services">Text Us</a>
+    <a href="mailto:gilbeglez25@gmail.com?subject=West%20Coast%20Oasis%20Landscaping%20Inquiry">Send Email</a>
+    <a href="https://docs.google.com/forms/d/e/1FAIpQLSf4jQDcRzcdxgDbwdOZg0kuHS1dZ4uhszbnbEEJSYYQZfv0UA/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">Request a Quote</a>
+  </div>
+</header>
+
+<div class="container">
+  <div class="section">
+    <h2>Why Choose Us?</h2>
+    <ul>
+      <li>On-time and reliable service</li>
+      <li>Affordable pricing for every budget</li>
+      <li>Friendly and professional crew</li>
+      <li>Locally owned and trusted</li>
+    </ul>
+    <p>Call us today and bring your garden to life!</p>
+  </div>
+
+  <div class="section">
+    <h2>Our Services</h2>
+    <ul>
+      <li>Lawn cutting and basic maintenance</li>
+      <li>Garden organization and cleanup</li>
+      <li>Weeding and trimming</li>
+      <li>Leaf removal and debris clearing</li>
+      <li>Seasonal yard care</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>Contact</h2>
+    <p><strong>Owner:</strong> Gilbert González</p>
+    <p><strong>Phone:</strong> <a href="tel:+19414577317">941-457-7317</a></p>
+    <p><strong>Email:</strong> <a href="mailto:gilbeglez25@gmail.com?subject=West%20Coast%20Oasis%20Landscaping%20Inquiry">gilbeglez25@gmail.com</a></p>
+    <p><strong>Address:</strong> <a href="https://www.google.com/maps?q=1790+South+Biscayne,+North+Port,+FL+34287" target="_blank">1790 South Biscayne, North Port, FL 34287</a></p>
+  </div>
+
+  <div class="section">
+    <h2>What Our Clients Say</h2>
+    <p><em>Maria R.</em> – “West Coast Oasis completely transformed my backyard. Now it's my favorite place to relax!”</p>
+    <p><em>James D.</em> – “Professional, affordable, and friendly. Highly recommended!”</p>
+  </div>
+
+  <div class="section">
+    <h2>About Us</h2>
+    <p>West Coast Oasis Landscaping is a locally owned and operated business based in North Port, Florida, serving North Port and surrounding cities. We focus on providing reliable, affordable, and friendly yard care services to help you maintain and improve your outdoor spaces.</p>
+    <p>Our bilingual team speaks both English and Spanish to ensure clear communication and excellent customer service. We work closely with our clients to understand their needs and deliver quality results.</p>
+  </div>
+</div>
+
+<footer>
+  &copy; 2025 West Coast Oasis Landscaping • All rights reserved
+</footer>
+
 </body>
 </html>
