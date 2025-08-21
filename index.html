@@ -29,7 +29,7 @@
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     }
     header img {
-      max-height: 110px; /* aumentado de 80px a 110px */
+      max-height: 110px;
       margin-bottom: 15px;
     }
     header h1 {
@@ -113,6 +113,14 @@
       border-top: 4px solid var(--green);
       font-weight: 500;
     }
+    footer a {
+      color: #006e51;
+      font-weight: bold;
+      text-decoration: none;
+    }
+    footer a:hover {
+      text-decoration: underline;
+    }
     @media (max-width: 600px) {
       .nav-buttons {
         justify-content: center;
@@ -180,7 +188,19 @@
 
 <footer>
   &copy; 2025 West Coast Oasis Landscaping • All rights reserved
+  <br>
+  Powered by <a href="#" onclick="handleContactClick()">Teijeira Studios</a>
 </footer>
+
+<script>
+  function handleContactClick() {
+    if (/Android|iPhone|iPad|iPod/i.test(navigator.userAgent)) {
+      window.location.href = "sms:+19413102786?body=I%20need%20services%20from%20Teijeira%20Studios";
+    } else {
+      window.location.href = "mailto:teijeirastudios@gmail.com?subject=I%20need%20services%20from%20Teijeira%20Studios&body=I%20need%20services%20from%20Teijeira%20Studios";
+    }
+  }
+</script>
 
 </body>
 </html>
